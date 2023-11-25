@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button, ButtonVariant } from './'
+import { Button, ButtonProps, ButtonVariant } from './'
 
 const meta = {
   argTypes: {
@@ -12,10 +12,10 @@ const meta = {
   component: Button,
   tags: ['autodocs'],
   title: 'Components/UI/Button',
-} satisfies Meta<typeof Button> // если красный обновить webstorm
+} satisfies Meta<ButtonProps> // если красный обновить webstorm typeof Button
 
 export default meta
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof Button>
 
 export const Primary: Story = {
   args: {

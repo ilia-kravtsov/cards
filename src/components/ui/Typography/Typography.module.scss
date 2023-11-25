@@ -4,6 +4,7 @@
   font-weight: 700;
   font-style: normal;
   line-height: 36px;
+  white-space: pre-wrap;
 }
 
 .h1 {
@@ -12,6 +13,7 @@
   font-weight: 700;
   font-style: normal;
   line-height: 36px;
+  white-space: pre-wrap;
 }
 
 .h2 {
@@ -20,6 +22,7 @@
   font-weight: 700;
   font-style: normal;
   line-height: 24px;
+  white-space: pre-wrap;
 }
 
 .h3 {
@@ -28,6 +31,7 @@
   font-weight: 700;
   font-style: normal;
   line-height: 24px;
+  white-space: pre-wrap;
 }
 
 .body_1 {
@@ -36,6 +40,7 @@
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
+  white-space: pre-wrap;
 }
 
 .body_2 {
@@ -44,6 +49,7 @@
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
+  white-space: pre-wrap;
 }
 
 .subtitle_1 {
@@ -52,6 +58,7 @@
   font-weight: 700;
   font-style: normal;
   line-height: 24px;
+  white-space: pre-wrap;
 }
 
 .subtitle_2 {
@@ -60,6 +67,7 @@
   font-weight: 700;
   font-style: normal;
   line-height: 24px;
+  white-space: pre-wrap;
 }
 
 .caption {
@@ -68,6 +76,7 @@
   font-weight: 400;
   font-style: normal;
   line-height: 16px;
+  white-space: pre-wrap;
 }
 
 .overline {
@@ -76,6 +85,7 @@
   font-weight: 700;
   font-style: normal;
   line-height: 16px;
+  white-space: pre-wrap;
 }
 
 .link_1 {
@@ -85,13 +95,15 @@
   font-style: normal;
   line-height: 24px; /* 171.429% */
   text-decoration-line: underline;
+  white-space: pre-wrap;
 }
 
 .link_2 {
   font-family: Roboto, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   line-height: 16px; /* 133.333% */
   text-decoration-line: underline;
+  white-space: pre-wrap;
 }

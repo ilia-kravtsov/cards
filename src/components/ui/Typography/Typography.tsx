@@ -1,39 +1,23 @@
-import s from './Typography.module.scss'
-export const TypographyVariant = [
-  'body_1',
-  'body_2',
-  'caption',
-  'link_1',
-  'link_2',
-  'overline',
-  'subtitle_1',
-  'subtitle_2',
-  'h1',
-  'h2',
-  'h3',
-  'large',
-]
+import { ComponentPropsWithoutRef, ElementType } from 'react'
 
-export type TypographyProps = {
-  as: any
+import s from './Typography.module.scss'
+
+export type TypographyProps<T extends ElementType> = {
+  as?: T
   className?: string
-  text: string
-  variant?: (typeof TypographyVariant)[number]
-}
+  href?: string
+  target?: string
+  to?: string
+} & ComponentPropsWithoutRef<T>
 /**
  * Typography components description
  */
-export const Typography = ({
-  as: Component,
-  className,
-  text,
-  variant,
-  ...rest
-}: TypographyProps) => {
+export const Typography = <T extends ElementType = 'div'>(props: TypographyProps<T>) => {
+  const { as: Component = 'div', className, ...rest } = props
+
   return (
-    <Component {...rest} className={`${s[className]}`}>
-      <span>{`${Component}`}</span>
-      <span>{text}</span>
+    <Component className={s[className!]} {...rest}>
+      <span>{'Carosserie Test Zürich\n' + 'Stauffacherstrasse 31\n' + '8004 Zürich, ZH, CH'}</span>
     </Component>
   )
 }
