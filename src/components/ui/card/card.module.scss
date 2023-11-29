@@ -1,0 +1,23 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  align-items: flex-start;
+
+  width: 1721px;
+  padding: 23px 1257px 69px 44px;
+}
+
+.card {
+  flex-shrink: 0;
+
+  width: 420px;
+  height: 552px;
+
+  background: #313131;
+  filter: drop-shadow(-1px -1px 2px rgb(0 0 0 / 10%)) drop-shadow(1px 1px 2px rgb(0 0 0 / 10%));
+
+  fill: var(--dark-700, #171717);
+  stroke: #313131;
+  stroke-width: 1px;
+}

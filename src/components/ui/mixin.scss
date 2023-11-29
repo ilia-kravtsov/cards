@@ -1,0 +1,8 @@
+@mixin button-story($flex, $centerVsNormal, $stretchVsNormal) {
+  display: $flex;
+  gap: 10px;
+  align-items: $centerVsNormal;
+  justify-content: $centerVsNormal;
+  align-self: $stretchVsNormal;
+  border-radius: 4px;
+}
