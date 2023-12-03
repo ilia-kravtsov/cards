@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { BrowserRouter, Link } from 'react-router-dom'
 
-import { Typography } from '@/components/ui/Typography/Typography'
+import { Typography } from './Typography'
 
 const meta = {
   component: Typography,

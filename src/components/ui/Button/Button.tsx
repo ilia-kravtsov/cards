@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 
 import clsx from 'clsx'
 
-import s from './button.module.scss'
+import s from './Button.module.scss'
 
 export const ButtonVariant = ['link', 'primary', 'secondary', 'tertiary'] as const
 
@@ -12,7 +12,7 @@ export type ButtonProps<T extends ElementType = 'button'> = {
   className?: string
   disabled?: boolean
   /**
-   * add width: 100% to the `button` element
+   * add width: 100% to the `Button` element
    */
   fullWidth?: boolean
   // variant?: 'link' | 'primary' | 'secondary' | 'tertiary'

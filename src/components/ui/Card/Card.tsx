@@ -1,10 +1,10 @@
-import s from './card.module.scss'
+import s from './Card.module.scss'
 
 export type CardProps = {}
 /**
  * Card component description
  */
-export const card = (props: CardProps) => {
+export const Card = (props: CardProps) => {
   const { ...rest } = props
 
   return (

@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { Button, ButtonProps, ButtonVariant } from '@/components/ui/Button/Button'
+
 import buttonIcon from '../../../styles/buttonIcon.svg'
-import { Button, ButtonProps, ButtonVariant } from './'
 
 const meta = {
   argTypes: {
@@ -57,7 +58,7 @@ export const Tertiary: Story = {
 }
 export const Link: Story = {
   args: {
-    children: 'Link-button',
+    children: 'Link-Button',
     disabled: false,
     variant: 'link',
   },
@@ -76,7 +77,7 @@ export const FullWidth: Story = {
 export const AsLink: Story = {
   args: {
     as: 'a',
-    children: 'Link looks like a button',
+    children: 'Link looks like a Button',
     variant: 'primary',
   },
 }
