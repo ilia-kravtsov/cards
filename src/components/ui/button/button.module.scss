@@ -1,0 +1,116 @@
+@import '../../../styles/sass/mixin';
+
+.button {
+  all: unset;
+  cursor: pointer;
+}
+
+.primary {
+  @include button-story(inline-flex, center, center, var(--color-accent-500));
+
+  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+
+  &:hover {
+    background: var(--color-accent-300);
+  }
+
+  &:active {
+    background: var(--color-accent-700);
+  }
+
+  &:focus-visible {
+    border: 2px solid var(--color-info-700);
+  }
+
+  &:disabled {
+    color: #c3c1c7;
+    background: var(--color-accent-900);
+  }
+}
+
+.secondary {
+  @include button-story(flex, center, center, var(--color-dark-300));
+
+  align-self: stretch;
+  box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+
+  &:hover {
+    background: var(--color-dark-100);
+    box-shadow: 0 4px 4px 0 rgb(77 86 96 / 13%);
+  }
+
+  &:active {
+    background: var(--color-dark-500);
+    box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  }
+
+  &:focus-visible {
+    background: var(--color-dark-300);
+    border: 2px solid var(--color-info-700);
+    box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  }
+
+  &:disabled {
+    color: #c3c1c7;
+    background: var(--color-dark-300);
+    box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  }
+}
+
+.tertiary {
+  @include button-story(inline-flex, center, center, var(--color-dark-900));
+
+  flex-shrink: 0;
+  color: var(--color-accent-500);
+  border: 1px solid var(--color-accent-500);
+
+  &:hover {
+    background: var(--color-dark-500);
+    border: 1px solid var(--color-accent-700);
+  }
+
+  &:active {
+    background: var(--color-accent-900);
+    border: 1px solid var(--color-accent-700);
+  }
+
+  &:focus-visible {
+    background: var(--color-dark-900);
+    border: 2px solid var(--color-info-700);
+  }
+
+  &:disabled {
+    color: var(--color-accent-900);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-accent-900);
+  }
+}
+
+.link {
+  @include button-story(inline-flex, normal, flex-start, none);
+
+  line-height: 24px;
+  color: var(--color-accent-500);
+
+  &:hover {
+    color: var(--color-accent-300);
+  }
+
+  &:active {
+    color: var(--color-accent-700);
+  }
+
+  &:focus-visible {
+    border: 2px solid var(--color-info-700);
+    border-radius: 130px;
+  }
+
+  &:disabled {
+    color: var(--color-accent-900);
+    background: var(--color-dark-900);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

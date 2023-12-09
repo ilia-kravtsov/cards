@@ -6,14 +6,15 @@ import eyeIcon from '../../../styles/eyeIcon.svg'
 import searchIcon from '../../../styles/searchIcon.svg'
 
 export type InputProps = {
-  disabled: boolean
-  onChange: (e: string) => void
+  disabled?: boolean | undefined
+  label?: string
+  onChange: (event: string) => void
   password?: boolean
   search?: boolean
-  value: string
+  value?: string
 }
 
-export const Input = ({ disabled, onChange, password, search, value }: InputProps) => {
+export const Input = ({ disabled, label, onChange, password, search, value }: InputProps) => {
   const [error, setError] = useState<null | string>(null)
   const [eye, setEye] = useState<boolean>(false)
   const onChangeCB = (e: ChangeEvent<HTMLInputElement>) => {
@@ -38,10 +39,10 @@ export const Input = ({ disabled, onChange, password, search, value }: InputProp
     error && !search
       ? s.input + ' ' + s.borderError + ' ' + s.error
       : error && search
-      ? s.inputSearchError
-      : search
-      ? s.inputSearch
-      : s.input
+        ? s.inputSearchError
+        : search
+          ? s.inputSearch
+          : s.input
   const containerClassName = error ? s.container + ' ' + s.borderError : s.container
 
   return (
@@ -52,7 +53,7 @@ export const Input = ({ disabled, onChange, password, search, value }: InputProp
           className={inputClassName}
           disabled={disabled}
           onChange={onChangeCB}
-          placeholder={'Input'}
+          placeholder={label}
           type={eye ? 'text' : type}
           value={value}
         />

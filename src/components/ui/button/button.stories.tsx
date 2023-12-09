@@ -1,12 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button, ButtonProps, ButtonVariant } from '@/components/ui/Button/Button'
-
 import buttonIcon from '../../../styles/buttonIcon.svg'
+import { Button, ButtonProps, ButtonVariant } from './button'
 
 const meta = {
   argTypes: {
     disabled: { control: 'boolean' },
+    title: {
+      control: { type: 'text' },
+    },
     variant: {
       control: { type: 'radio' },
       options: ButtonVariant,
@@ -14,37 +16,38 @@ const meta = {
   },
   component: Button,
   tags: ['autodocs'],
-  title: 'Components/UI/Button',
-} satisfies Meta<ButtonProps> // если красный обновить webstorm typeof Button
+  title: 'Components/UI/button',
+} satisfies Meta<ButtonProps> // если красный обновить webstorm typeof button
 
 export default meta
+
 type Story = StoryObj<typeof Button>
 
 export const Primary: Story = {
   args: {
-    children: 'Button primary',
+    children: 'button primary',
     disabled: false,
     variant: 'primary',
   },
 }
-Primary.storyName = 'Primary Button'
+Primary.storyName = 'Primary button'
 
 export const PrimaryWithIcon: Story = {
   args: {
-    children: 'Button primary',
+    children: 'button primary',
     disabled: false,
     variant: 'primary',
   },
   render: ({ disabled }) => (
     <Button disabled={disabled}>
-      <img alt={'Button Icon'} src={buttonIcon} />
+      <img alt={'button Icon'} src={buttonIcon} />
       Button primary
     </Button>
   ),
 }
 export const Secondary: Story = {
   args: {
-    children: 'Button secondary',
+    children: 'button secondary',
     disabled: false,
     variant: 'secondary',
   },
@@ -58,7 +61,7 @@ export const Tertiary: Story = {
 }
 export const Link: Story = {
   args: {
-    children: 'Link-Button',
+    children: 'Link-button',
     disabled: false,
     variant: 'link',
   },
@@ -67,7 +70,7 @@ export const Link: Story = {
 export const FullWidth: Story = {
   args: {
     // ...Primary.args, те что ниже перезаписывают свойства из Primary
-    children: 'Full Width Button',
+    children: 'Full Width button',
     disabled: false,
     fullWidth: true,
     variant: 'primary',
@@ -77,7 +80,7 @@ export const FullWidth: Story = {
 export const AsLink: Story = {
   args: {
     as: 'a',
-    children: 'Link looks like a Button',
+    children: 'Link looks like a button',
     variant: 'primary',
   },
 }

@@ -1,0 +1,22 @@
+@mixin button-story($flex, $justifyContent, $alignItems, $backgroundColor) {
+  display: $flex;
+  gap: 10px;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+
+  padding: 6px 28px;
+
+  background: $backgroundColor;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+//@mixin typography-story($fontSize, $fontWeight, $lineHeight, $color) {
+//  font-family: var(--font-family-primary);
+//  font-size: $fontSize;
+//  font-weight: $fontWeight;
+//  line-height: $lineHeight;
+//  color: $color;
+//  white-space: pre-wrap;
+//}

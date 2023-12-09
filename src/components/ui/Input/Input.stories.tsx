@@ -11,7 +11,7 @@ const meta = {
   component: Input,
   tags: ['autodocs'],
   title: 'Components/UI/Input',
-} satisfies Meta<InputProps> // если красный обновить webstorm typeof Button
+} satisfies Meta<InputProps> // если красный обновить webstorm typeof button
 
 export default meta
 type Story = StoryObj<typeof Input>
